@@ -1,0 +1,8 @@
+{
+  "name": "aniux-ai-admin-phu-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Backend API for ANIUX AI Admin Phu Android app",
+  "scripts": {"start": "node server.js", "check": "node --check server.js" },
+  "engines": {"node": ">=20"}
+}

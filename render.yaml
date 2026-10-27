@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: aniux-ai-admin-phu-backend
+    runtime: node
+    plan: free
+    buildCommand: npm install --omit=dev
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: ADMIN_HELPER_KEY
+        sync: false
+      - key: NVNMC_PANEL_URL
+        value: https://panel.nvnmc.cloud
+      - key: NVNMC_SERVER_IDENTIFIER
+        sync: false
+      - key: NVNMC_API_KEY
+        sync: false
+      - key: TOKEN_TTL_MINUTES
+        value: "60"
+      - key: ADMIN_HELPER_PERMISSIONS
+        value: "status,players,announce,kick"
